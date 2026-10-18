@@ -1,6 +1,6 @@
 {
- "id": "daniel1547/gemma4-paper-ablation-public",
- "title": "Gemma 4 Paper Track: Budget-Aware Orchestration Ablation \u2014 Reproduction",
+ "id": "daniel1547/gemma-4-budget-aware-orchestration-reproduction",
+ "title": "Gemma 4 Budget-Aware Orchestration: Reproduction",
  "code_file": "gemma4_paper_ablation_public.ipynb",
  "language": "python",
  "kernel_type": "notebook",

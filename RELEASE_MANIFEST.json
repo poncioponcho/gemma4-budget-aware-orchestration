@@ -1,8 +1,8 @@
 {
   "release": "gemma4-budget-aware-orchestration-artifact",
-  "generated_utc": "2026-10-18T04:58:25+00:00",
+  "generated_utc": "2026-10-18T05:01:57+00:00",
   "file_count": 25,
-  "total_bytes": 317326,
+  "total_bytes": 318096,
   "integrity_note": "SHA-256 over every shipped file. The per-task CSV regenerates every paper number (see code/reproduce_results.ipynb assertions).",
   "provenance": {
     "per_task_results.csv": "Extracted from the six archived arm-run outputs with code/make_per_task_csv.py (attempt-selection and token-metric conventions mirror the frozen analyze_ablation.py).",
@@ -18,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5149,
-      "sha256": "95a0ca7300b079a538b8c3a6a5f92f0a5030158c97d41b0eabd9f1f7879027c5"
+      "bytes": 5424,
+      "sha256": "598ee50540352edbf1c4b5184a62ee483ab629ddf2fac305c2e7d9ab8870be1e"
     },
     {
       "path": "code/analyze_ablation.py",
@@ -28,8 +28,8 @@
     },
     {
       "path": "code/build_kaggle_kernel.py",
-      "bytes": 8417,
-      "sha256": "1026ee1f85476fed47cea65a11fb0d97e00689792275ac4ebd7756c2c3585229"
+      "bytes": 8921,
+      "sha256": "6cd338839ae43898b2b894f86b831f31aa822ef407dcbf7fc6e24fc43b376c1a"
     },
     {
       "path": "code/build_reproduce_notebook.py",
@@ -104,12 +104,12 @@
     {
       "path": "kaggle_public_kernel/gemma4_paper_ablation_public.ipynb",
       "bytes": 94142,
-      "sha256": "d42fe76b5292755fb0d4e5489aac4f88fff368c8ad3de35a4576836ef728f469"
+      "sha256": "e5328a9cb2241b50950253cb02cee4b7b09b8570f491278ff7a251f89c7a30e3"
     },
     {
       "path": "kaggle_public_kernel/kernel-metadata.json",
-      "bytes": 572,
-      "sha256": "665003a1491232cfab346f23a0e1497740acb25ecaee8aa4d1d11bdd127618ea"
+      "bytes": 563,
+      "sha256": "18f648e13080631c3431afa3c3f7578a1f8b6e6e7773954ea0371c79a0a08dfd"
     },
     {
       "path": "logs/analyze_ablation_B0p_vs_B1A2_20261017.log",
@@ -136,5 +136,10 @@
       "bytes": 20631,
       "sha256": "e755c208431a5ddf1984d71877257c3614ec8908abdd108cf4d64b3e95561862"
     }
-  ]
+  ],
+  "live_links": {
+    "repository": "https://github.com/poncioponcho/gemma4-budget-aware-orchestration",
+    "kaggle_notebook": "https://www.kaggle.com/code/daniel1547/gemma-4-budget-aware-orchestration-reproduction",
+    "kaggle_notebook_run_status": "COMPLETE (version 1), log contains 'VERIFICATION PASSED'"
+  }
 }

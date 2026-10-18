@@ -20,6 +20,12 @@ grew. The transferable finding: under a session-level shared budget with no per-
 accounting, prompt-level quantitative constraints and behavioral prohibitions are
 non-binding on this model.
 
+## Live links
+
+- Repository: <https://github.com/poncioponcho/gemma4-budget-aware-orchestration>
+- Executable reproduction notebook on Kaggle (self-contained, no local files needed):
+  <https://www.kaggle.com/code/daniel1547/gemma-4-budget-aware-orchestration-reproduction>
+
 ## Contents
 
 | Path | What it is |

@@ -3,6 +3,7 @@
 import csv
 import io
 import json
+import re
 from pathlib import Path
 
 import nbformat as nbf
@@ -163,11 +164,14 @@ print("\\nVERIFICATION PASSED")"""),
 ]
 
 out_dir = HERE.parent / "kaggle_public_kernel"
-out_dir.mkdir(exist_ok=True)
+# NOTE: the local sandbox brokers mkdir and rejects exist_ok=True on an existing
+# directory (EEXIST), so create only when absent.
+if not out_dir.exists():
+    out_dir.mkdir()
 nbf.write(nb, out_dir / "gemma4_paper_ablation_public.ipynb")
 metadata = {
-    "id": "daniel1547/gemma4-paper-ablation-public",
-    "title": "Gemma 4 Paper Track: Budget-Aware Orchestration Ablation — Reproduction",
+    "id": "daniel1547/gemma-4-budget-aware-orchestration-reproduction",
+    "title": "Gemma 4 Budget-Aware Orchestration: Reproduction",
     "code_file": "gemma4_paper_ablation_public.ipynb",
     "language": "python",
     "kernel_type": "notebook",
@@ -182,5 +186,16 @@ metadata = {
     "model_sources": [],
     "docker_image_pinning_type": "original",
 }
+
+
+def _slug(text: str) -> str:
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", text.lower())).strip("-")
+
+
+# Kaggle rejects a push whose title does not resolve to the id slug (HTTP 400).
+assert metadata["id"].split("/")[-1] == _slug(metadata["title"]), (
+    f"title slug {_slug(metadata['title'])!r} != id {metadata['id'].split('/')[-1]!r}"
+)
+
 (out_dir / "kernel-metadata.json").write_text(json.dumps(metadata, indent=1) + "\n", encoding="utf-8")
 print("wrote", out_dir)
