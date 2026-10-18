@@ -1,8 +1,8 @@
 {
   "release": "gemma4-budget-aware-orchestration-artifact",
-  "generated_utc": "2026-10-18T05:01:57+00:00",
-  "file_count": 25,
-  "total_bytes": 318096,
+  "generated_utc": "2026-10-18T13:16:36+00:00",
+  "file_count": 26,
+  "total_bytes": 341760,
   "integrity_note": "SHA-256 over every shipped file. The per-task CSV regenerates every paper number (see code/reproduce_results.ipynb assertions).",
   "provenance": {
     "per_task_results.csv": "Extracted from the six archived arm-run outputs with code/make_per_task_csv.py (attempt-selection and token-metric conventions mirror the frozen analyze_ablation.py).",
@@ -130,6 +130,11 @@
       "path": "logs/c3_three_arm_n65_20261016.log",
       "bytes": 3084,
       "sha256": "36e2a929fe4cbe855b9b8c1ce2aa51001b77bb7bb0847d66cced445a0d760db2"
+    },
+    {
+      "path": "paper/card_560x280.png",
+      "bytes": 23664,
+      "sha256": "cac072d2ac162b179d7d3e0eae4d4d8abd34c853f9ccd07f0a0c97f27e60546d"
     },
     {
       "path": "paper/writeup.md",
