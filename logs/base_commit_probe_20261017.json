@@ -1,0 +1,153 @@
+{
+  "schema": "base_commit_probe_20261017",
+  "method": "official swegemma eval CLI with --sandbox subprocess --skip-agent-patch; task.test_patch applied and required tests validated by harness",
+  "tasks_source": "audit_artifacts/kaggle/tasks.jsonl",
+  "snapshots_dir": "audit_artifacts/w2_b0_20261013/base_commit_probe",
+  "submission_dir": "audit_artifacts/kaggle/sample_submission",
+  "runtime": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "swegemma": "0.2.7",
+    "adk_submission": "0.2.12",
+    "adk_eval_core": "0.1.0",
+    "google_adk": "2.12.0",
+    "pytest": "8.3.4",
+    "starlette": "0.47.3"
+  },
+  "arms": {
+    "B0": {
+      "tasks": [
+        "rich_3894",
+        "rich_3905"
+      ],
+      "resolved_base_commit": 0,
+      "n": 2
+    },
+    "B0p": {
+      "tasks": [
+        "fastapi_14077",
+        "fastapi_14301"
+      ],
+      "resolved_base_commit": 1,
+      "n": 2
+    },
+    "B1A": {
+      "tasks": [
+        "fastapi_14077",
+        "fastapi_14463",
+        "fastapi_14851",
+        "requests_7427",
+        "rich_3043",
+        "rich_3180",
+        "rich_3894"
+      ],
+      "resolved_base_commit": 3,
+      "n": 7
+    }
+  },
+  "unique_tasks": {
+    "fastapi_14077": {
+      "instance_id": "fastapi_14077",
+      "resolved_base_commit": true,
+      "test_exit_code": 0,
+      "error": null,
+      "duration_seconds": 2.31,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14077/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14077/test_outputs/fastapi_14077.log",
+      "test_output_tail": "STDOUT:\n...                                                                      [100%]\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_1bcbac76-999_v__eccg_/tmp/_swegemma_junit_71c0b3f9fd85.xml -\n3 passed in 0.16s\n\nSTDERR:"
+    },
+    "fastapi_14301": {
+      "instance_id": "fastapi_14301",
+      "resolved_base_commit": false,
+      "test_exit_code": 1,
+      "error": null,
+      "duration_seconds": 2.48,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14301/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14301/test_outputs/fastapi_14301.log",
+      "test_output_tail": "            if response_started:\n>               raise RuntimeError(\"Caught handled exception, but response already started.\") from exc\nE               RuntimeError: Caught handled exception, but response already started.\n\n/tmp/swegemma_probe_venv/lib/python3.14/site-packages/starlette/_exception_handler.py:56: RuntimeError\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_41466b5a-5b6_78f0pssk/tmp/_swegemma_junit_ff4170a5d630.xml -\n=========================== short test summary info ============================\nFAILED tests/test_dependency_yield_scope.py::test_router_level_dep_scope_function\nFAILED tests/test_dependency_yield_scope.py::test_app_level_dep_scope_function\n2 failed, 9 passed in 0.34s\n\nSTDERR:"
+    },
+    "fastapi_14463": {
+      "instance_id": "fastapi_14463",
+      "resolved_base_commit": false,
+      "test_exit_code": 1,
+      "error": null,
+      "duration_seconds": 2.48,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14463/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14463/test_outputs/fastapi_14463.log",
+      "test_output_tail": "E         Omitting 3 identical items, use -vv to show\nE         Differing items:\nE         {'paths': {'/route1': {'get': {'operationId': 'route1_route1_get', 'responses': {'200': {'content': {...}, 'descriptio...n': 'Successful Response'}, '500': {'content': {...}, 'description': 'Internal Server Error'}}, 'summary': 'Route2'}}}} != {'paths': {'/route1': {'get': {'operationId': 'route1_route1_get', 'responses': {'200': {'content': {...}, 'descriptio...n': 'Successful Response'}, '500': {'content': {...}, 'description': 'Internal Server Error'}}, 'summary': 'Route2'}}}}\nE         Use -v to get more diff\n\ntests/test_additional_responses_union_duplicate_anyof.py:48: AssertionError\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_2988576b-bb9_qkpp9ksc/tmp/_swegemma_junit_1595821357e4.xml -\n=========================== short test summary info ============================\nFAILED tests/test_additional_responses_union_duplicate_anyof.py::test_openapi_schema\n1 failed in 0.19s\n\nSTDERR:"
+    },
+    "fastapi_14851": {
+      "instance_id": "fastapi_14851",
+      "resolved_base_commit": true,
+      "test_exit_code": 0,
+      "error": null,
+      "duration_seconds": 2.4,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14851/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/fastapi_14851/test_outputs/fastapi_14851.log",
+      "test_output_tail": "STDOUT:\n.........                                                                [100%]\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_c83d798b-abb_gco1q5gq/tmp/_swegemma_junit_b3630f75f56c.xml -\n9 passed in 0.19s\n\nSTDERR:"
+    },
+    "requests_7427": {
+      "instance_id": "requests_7427",
+      "resolved_base_commit": true,
+      "test_exit_code": 0,
+      "error": null,
+      "duration_seconds": 1.86,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/requests_7427/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/requests_7427/test_outputs/requests_7427.log",
+      "test_output_tail": "STDOUT:\n..s..................................................................... [ 31%]\n........................................................................ [ 62%]\n....................................................................ssss [ 94%]\nsssssss.....s                                                            [100%]\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_5efd08a0-4f6_lruco3m_/tmp/_swegemma_junit_b8a5b86d7bc4.xml -\n216 passed, 13 skipped in 0.10s\n\nSTDERR:"
+    },
+    "rich_3043": {
+      "instance_id": "rich_3043",
+      "resolved_base_commit": false,
+      "test_exit_code": 1,
+      "error": null,
+      "duration_seconds": 2.03,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3043/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3043/test_outputs/rich_3043.log",
+      "test_output_tail": "tests/test_console.py:603: AssertionError\n----------------------------- Captured stdout call -----------------------------\nfoo\n'<!DOCTYPE html>\\n<head>\\n<meta charset=\"UTF-8\">\\n<style>\\n\\nbody {\\n    color: #000000;\\n    background-color: #ffffff;\\n}\\n</style>\\n</head>\\n<html>\\n<body>\\n    <pre style=\"font-family:Menlo,\\'DejaVu Sans Mono\\',consolas,\\'Courier New\\',monospace\"><code>foo\\n</code></pre>\\n</body>\\n</html>\\n'\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_6c9e0dd2-824_dvnwlke6/tmp/_swegemma_junit_507b5cd8dbe7.xml -\n=========================== short test summary info ============================\nFAILED tests/test_console.py::test_export_html - assert '<!DOCTYPE ht...y>\\n<...\nFAILED tests/test_console.py::test_export_html_inline - assert '<!DOCTYPE ht....\nFAILED tests/test_console.py::test_save_html - assert '<!DOCTYPE ht...y>\\n</h...\n3 failed, 93 passed in 0.10s\n\nSTDERR:"
+    },
+    "rich_3180": {
+      "instance_id": "rich_3180",
+      "resolved_base_commit": false,
+      "test_exit_code": 1,
+      "error": null,
+      "duration_seconds": 2.03,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3180/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3180/test_outputs/rich_3180.log",
+      "test_output_tail": "\ntests/test_text.py:793: AssertionError\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_1f747998-f1c_4ew60xqj/tmp/_swegemma_junit_4135eaff3f23.xml -\n=========================== short test summary info ============================\nFAILED tests/test_cells.py::test_chop_cells - AssertionError: assert ['kji', ...\nFAILED tests/test_cells.py::test_chop_cells_double_width_boundary - Assertion...\nFAILED tests/test_cells.py::test_chop_cells_mixed_width - AssertionError: ass...\nFAILED tests/test_text.py::test_wrap_cjk_mixed - AssertionError: assert '123...\nFAILED tests/test_text.py::test_assemble_meta - AssertionError: assert [Span(...\n5 failed, 109 passed in 0.13s\n\nSTDERR:"
+    },
+    "rich_3894": {
+      "instance_id": "rich_3894",
+      "resolved_base_commit": false,
+      "test_exit_code": 1,
+      "error": null,
+      "duration_seconds": 1.99,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3894/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3894/test_outputs/rich_3894.log",
+      "test_output_tail": "        except Exception as e:\n>           assert False, f\"Class with __qualname__ in __slots__ shouldn't raise {e}\"\nE           AssertionError: Class with __qualname__ in __slots__ shouldn't raise Only str or Text can be appended to Text\nE           assert False\n\ntests/test_inspect.py:417: AssertionError\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_0bade822-a03_0_bysy3n/tmp/_swegemma_junit_a4631b41ac72.xml -\n=========================== short test summary info ============================\nFAILED tests/test_inspect.py::test_qualname_in_slots - AssertionError: Class ...\n1 failed, 41 passed, 4 skipped in 0.08s\n\nSTDERR:"
+    },
+    "rich_3905": {
+      "instance_id": "rich_3905",
+      "resolved_base_commit": false,
+      "test_exit_code": 1,
+      "error": null,
+      "duration_seconds": 2.32,
+      "result_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3905/task_results.jsonl",
+      "test_output_path": "audit_artifacts/w2_b0_20261013/base_commit_probe/results/final/rich_3905/test_outputs/rich_3905.log",
+      "test_output_tail": "E         - ''\nE         + '\\n'\n\ntests/test_progress.py:589: AssertionError\n----------------------------- Captured stdout call -----------------------------\n'\\n'\n- generated xml file: /var/folders/w8/nc6rj3f11jd_ttk_hc2yxz7h0000gn/T/swegemma_sandbox_fed1dffc-e4c_n2btektv/tmp/_swegemma_junit_3d6870c5312f.xml -\n=========================== short test summary info ============================\nFAILED tests/test_progress.py::test_no_output_if_progress_is_disabled_non_interactive\n1 failed, 38 passed in 0.42s\n\nSTDERR:"
+    }
+  },
+  "unique_resolved_base_commit": [
+    "fastapi_14077",
+    "fastapi_14851",
+    "requests_7427"
+  ],
+  "conclusion": {
+    "fastapi_14851_base_pass": true,
+    "additional_base_passes_beyond_fastapi_14851": [
+      "fastapi_14077",
+      "requests_7427"
+    ],
+    "task_set_validity_defect_confirmed": true,
+    "note": "Base pass means the verification test_patch passes on the unmodified snapshot. It is a validity floor issue, not a change to archived arm counts."
+  }
+}

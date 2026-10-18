@@ -1,0 +1,33 @@
+{
+  "schema_version": "w2_b0_split_manifest_v1",
+  "generated_at_utc": "2026-10-13T12:30:53Z",
+  "source_tasks": {
+    "path": "audit_artifacts/kaggle/tasks.jsonl",
+    "sha256": "e4b3fd60f69dbc2b9213e54eeb9636db78aefe92c1d06269d73d9f5f8f3c8ad6",
+    "records_read": 129,
+    "excluded_instance_ids": [
+      "httpx_3672"
+    ],
+    "records_after_exclusion": 128
+  },
+  "files": [
+    {
+      "path": "split_development.json",
+      "split": "development",
+      "task_count": 65,
+      "sha256": "0cd2371a9a4bd5af3280e03948a719af04fed5ef4c7f72811d00a08d1997a3b5"
+    },
+    {
+      "path": "split_heldout.json",
+      "split": "held-out",
+      "task_count": 63,
+      "sha256": "4600b8c12aa64d3739e94101625960f006c79fb253cf2a6715568a52d4f148db"
+    }
+  ],
+  "integrity": {
+    "disjoint": true,
+    "exhaustive_after_exclusion": true,
+    "excluded_absent": true
+  },
+  "held_out_discipline": "Do not read held-out results before method freeze; this manifest records only the frozen IDs and hashes."
+}

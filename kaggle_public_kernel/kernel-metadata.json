@@ -1,0 +1,23 @@
+{
+ "id": "daniel1547/gemma4-paper-ablation-public",
+ "title": "Gemma 4 Paper Track: Budget-Aware Orchestration Ablation \u2014 Reproduction",
+ "code_file": "gemma4_paper_ablation_public.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": false,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "keywords": [
+  "gemma-4",
+  "paper-track",
+  "ablation",
+  "agent",
+  "reproducibility"
+ ],
+ "dataset_sources": [],
+ "kernel_sources": [],
+ "competition_sources": [],
+ "model_sources": [],
+ "docker_image_pinning_type": "original"
+}

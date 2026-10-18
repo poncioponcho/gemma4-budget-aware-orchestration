@@ -1,0 +1,166 @@
+{
+  "schema": "w2_method_freeze_v1",
+  "frozen_at_utc": "2026-10-17T06:36:35.624789+00:00",
+  "files": {
+    "tasks_jsonl": {
+      "path": "audit_artifacts/kaggle/tasks.jsonl",
+      "sha256": "e4b3fd60f69dbc2b9213e54eeb9636db78aefe92c1d06269d73d9f5f8f3c8ad6"
+    },
+    "split_development": {
+      "path": "audit_artifacts/w2_b0_20261013/split_development.json",
+      "sha256": "0cd2371a9a4bd5af3280e03948a719af04fed5ef4c7f72811d00a08d1997a3b5"
+    },
+    "split_heldout": {
+      "path": "audit_artifacts/w2_b0_20261013/split_heldout.json",
+      "sha256": "4600b8c12aa64d3739e94101625960f006c79fb253cf2a6715568a52d4f148db"
+    },
+    "split_manifest": {
+      "path": "audit_artifacts/w2_b0_20261013/split_manifest.json",
+      "sha256": "f5fff5cab2098ae8d3a61be77651c43fb4f5fd2e09fa1d0f5404c0cefcf0666b"
+    }
+  },
+  "bundles": {
+    "B0p": {
+      "agent.yaml": "ed9402fdc2841672a4be3159fc89fc36fcbf8474a636984aceb14c9e0a95cfeb",
+      "configs/sampling.yaml": "3dab0b2506dae34ce92fef7b380d6073729104b23fe2cf66d44ac1d2f213aa6a",
+      "eval_config.yaml": "128ffaf12cf9032f2d42799a674ed4e3c102f4e2a65e50d742cb3a4b194039f9",
+      "prompts/analyzer.md": "c762b062032cc8463015e589ad8b4f0e17296062e1b0ff1e78712eef9f5e2d43",
+      "prompts/system.md": "f1cbf7943ee9687382321b1dfd9cd88581d608c1c8b8e6ea61a763bd1a3234af",
+      "sub_agents/code_analyzer.yaml": "7a764798e36cc68aa38900256245e4aed969b5439b992c7da4105b6ebcb7e62b"
+    },
+    "B1A": {
+      "agent.yaml": "38f017edf390d651e11b5d438e83dd156e9a7c9c68af18f569d434e8dd8bd0f2",
+      "configs/sampling.yaml": "3dab0b2506dae34ce92fef7b380d6073729104b23fe2cf66d44ac1d2f213aa6a",
+      "eval_config.yaml": "00bdaad115c0deb088b69b5567c735e93e9736f02ee1fd211a882c5e6bafb512",
+      "prompts/coder.md": "087ab121867b21210ed6669eb3ea9160a75d6119822313ab7f97268f50dec8f3",
+      "prompts/planner.md": "5f1576d6dbf61aceb24d522cc4c1b4dec7b7dea803337a7c0f4c89587aae3e81",
+      "sub_agents/coder.yaml": "f20baebc53757f70deb00e9ec25b223e67b33728faa6d3bf038c4f476a04f548"
+    },
+    "B1A2": {
+      "agent.yaml": "b8292068959dabca923628114fe0c46c3cba103631ba93bc4258e05d799ddf99",
+      "configs/sampling.yaml": "3dab0b2506dae34ce92fef7b380d6073729104b23fe2cf66d44ac1d2f213aa6a",
+      "eval_config.yaml": "00bdaad115c0deb088b69b5567c735e93e9736f02ee1fd211a882c5e6bafb512",
+      "prompts/planner.md": "09dd33e161c61e365db3a5b95a5a280a4d8fb8fbe2f2663336e82d81e869bbe5",
+      "prompts/root.md": "888d1a1c9c5e3d4017f627a20b1b1b6cd58bac068a20d5f0b82013899fa03213",
+      "sub_agents/planner.yaml": "b947684277e72313358d7fd56481cbedabc5d104da7f30cafefb76390f985c4f"
+    }
+  },
+  "b0_sample_submission": {
+    "agent.yaml": "de80dff58c1ab3e758a814b915c21113a16ddf632ac4d5fee238b8d6a1b6b5a8",
+    "configs/sampling.yaml": "635f6c96c7b59ed4040ac3017f8238e64f6700263a85b1f03b7e928c9cfc1118",
+    "eval_config.yaml": "adb486b67535fa59b427b79d44dafc131176f1f1964d184e16046ed520ede02d",
+    "prompts/analyzer.md": "c762b062032cc8463015e589ad8b4f0e17296062e1b0ff1e78712eef9f5e2d43",
+    "prompts/system.md": "f1cbf7943ee9687382321b1dfd9cd88581d608c1c8b8e6ea61a763bd1a3234af",
+    "sub_agents/code_analyzer.yaml": "73ff867103879db19d42ab2fd24673090793290e33170b06d2e377f3ae89b6d3"
+  },
+  "runtime": {
+    "max_output_tokens": 512,
+    "thinking_budget": 0,
+    "include_thoughts": false,
+    "budgets": {
+      "B0": {
+        "max_tool_calls": 10,
+        "max_time_minutes": 1,
+        "max_turns": 50
+      },
+      "B0p": {
+        "max_tool_calls": 20,
+        "max_time_minutes": 3,
+        "max_turns": 60
+      },
+      "B1A": {
+        "max_tool_calls": 20,
+        "max_time_minutes": 3,
+        "max_turns": 60
+      },
+      "B1A2": {
+        "max_tool_calls": 20,
+        "max_time_minutes": 3,
+        "max_turns": 60
+      }
+    },
+    "runtime_rewrites": [
+      "strip `adapter:` lines",
+      "remove adapters/ directory",
+      "sampling: thinking_budget=0, include_thoughts=false, max_output_tokens=512",
+      "models.yaml aliases: gemma-4-31b-it-qat-w4a16-ct / main_lora / tool_lora -> base model"
+    ]
+  },
+  "scripts": {
+    "stats.py": "99b6021ad2ced00d50d9bd089ad5229d876219e389c17cbd04a0f9509e1b426f",
+    "analyze_ablation.py": "4c013a2eab15f813d9a8c97721d9601125b691bea2cd7ac76337fb34f27c8d06",
+    "handoff_forensics.py": "dbd207a3732fe4b4526ded699c1e3fa5efc3260624100d630f1f985ed56b6915",
+    "build_ablation_notebook.py": "6f311b3f3f1ffc911b104fb4c105806d0aa2033e68adaec11d9a26c750965b74",
+    "validate_bundle.py": "714d02d1fe0c252ad0d055d8ba0ea875d16c9087a175f1e6c6607afaef0cbffb",
+    "task_record.py": "9ef80356962d8faacd75d103568da0b55ce8af93cc11a78fcf9eb54c4506e711"
+  },
+  "judgment": {
+    "primary_contrast": "B1A2 vs B0p (paired, same 20-call budget)",
+    "min_effect_pp": 10,
+    "alpha": 0.05,
+    "test": "McNemar exact conditional binomial; both doubling and standard two-sided must agree",
+    "note": "判定线自 2026-10-15 预注册后未改动"
+  },
+  "development_results": {
+    "B0": {
+      "n": 65,
+      "resolved": 2,
+      "rate": "3.1%",
+      "wilson": [
+        "0.8%",
+        "10.5%"
+      ]
+    },
+    "B0p": {
+      "n": 65,
+      "resolved": 4,
+      "rate": "6.2%",
+      "wilson": [
+        "2.4%",
+        "14.8%"
+      ]
+    },
+    "B1A": {
+      "n": 65,
+      "resolved": 7,
+      "rate": "10.8%",
+      "wilson": [
+        "5.3%",
+        "20.6%"
+      ]
+    },
+    "B1A2": {
+      "n": 65,
+      "resolved": 6,
+      "rate": "9.2%",
+      "wilson": [
+        "4.3%",
+        "18.7%"
+      ]
+    },
+    "contrasts": {
+      "B0p_vs_B0": {
+        "delta_pp": 3.1,
+        "p": 0.5,
+        "verdict": "不显著"
+      },
+      "B1A_vs_B0p": {
+        "delta_pp": 4.6,
+        "p": 0.4531,
+        "verdict": "预注册判定不成立"
+      },
+      "B1A2_vs_B0p": {
+        "delta_pp": 3.1,
+        "p": 0.625,
+        "verdict": "预注册判定不成立"
+      }
+    }
+  },
+  "not_claimed": [
+    "B1-ABC（机制 B）——未运行，不得推断",
+    "B1A3（planner-lite）——已建成但决定不跑，不得推断",
+    "任何 per-agent 预算或提交钩子——框架不支持（adk_submission closed registries）",
+    "官方 verify_task / leaderboard 判定——全部为 self-run official harness",
+    "held-out 63 的任何结果——冻结前未运行"
+  ]
+}

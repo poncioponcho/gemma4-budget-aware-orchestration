@@ -1,0 +1,29 @@
+
+===== B0p (roots=audit_artifacts/heldout_20261017/B0p/output/w2_results_b0p_heldout_0-63) n=63 =====
+resolved: 8/63 = 12.7% | Wilson 95% CI ['6.6%', '23.1%']
+失败模式: context_overflow=24 (38%), patch_failed_tests=16 (25%), abandoned_no_patch=9 (14%), resolved=8 (13%), budget_truncated=4 (6%), session_timeout=2 (3%)
+逐仓库:
+  fastapi: 3/33 resolved | {'abandoned_no_patch': 4, 'context_overflow': 14, 'patch_failed_tests': 8, 'resolved': 3, 'budget_truncated': 3, 'session_timeout': 1}
+  rich: 3/24 resolved | {'context_overflow': 9, 'resolved': 3, 'patch_failed_tests': 6, 'session_timeout': 1, 'abandoned_no_patch': 5}
+  requests: 2/6 resolved | {'budget_truncated': 1, 'patch_failed_tests': 2, 'resolved': 2, 'context_overflow': 1}
+tool call 截断（512 上限副作用，§6-5）: 8/63 任务
+token 经济性: prompt 中位数 120473 (n=63) | completion 中位数 1012
+
+===== B1A2 (roots=audit_artifacts/heldout_20261017/B1A2/output/w2_results_b1a2_heldout_0-63) n=63 =====
+resolved: 10/63 = 15.9% | Wilson 95% CI ['8.9%', '26.8%']
+失败模式: patch_failed_tests=21 (33%), abandoned_no_patch=20 (32%), resolved=10 (16%), context_overflow=8 (13%), budget_truncated=4 (6%)
+逐仓库:
+  fastapi: 2/33 resolved | {'patch_failed_tests': 13, 'abandoned_no_patch': 13, 'context_overflow': 3, 'budget_truncated': 2, 'resolved': 2}
+  rich: 6/24 resolved | {'resolved': 6, 'budget_truncated': 2, 'patch_failed_tests': 6, 'abandoned_no_patch': 6, 'context_overflow': 4}
+  requests: 2/6 resolved | {'patch_failed_tests': 2, 'resolved': 2, 'abandoned_no_patch': 1, 'context_overflow': 1}
+tool call 截断（512 上限副作用，§6-5）: 5/63 任务
+token 经济性: prompt 中位数 102138 (n=63) | completion 中位数 1382
+
+===== 配对 McNemar（精确二项，同任务配对）=====
+B0p vs B1A2: 配对 n=63 | B0p赢 3 / B1A2赢 5 | p=0.7266
+
+===== token 对比（prompt 中位数）=====
+  B0p: 120473 (n=63)
+  B1A2: 102138 (n=63)
+
+预注册判定（W2_PHASE2_ABLATION_PLAN.md §3）: B1A vs B0p 提升 ≥10pp 且 McNemar p<0.05 → 论文主张成立。

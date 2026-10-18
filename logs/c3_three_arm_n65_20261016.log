@@ -1,0 +1,42 @@
+
+===== B0 (roots=batch1/output/w2_results+batch23/output/w2_results+batch4/output/w2_results_b0_20-34_42-48+batch5/output/w2_results_b0_48-58_60-65) n=65 =====
+resolved: 2/65 = 3.1% | Wilson 95% CI ['0.8%', '10.5%']
+失败模式: budget_truncated=37 (57%), patch_failed_tests=16 (25%), abandoned_no_patch=5 (8%), context_overflow=3 (5%), session_timeout=2 (3%), resolved=2 (3%)
+逐仓库:
+  fastapi: 0/34 resolved | {'budget_truncated': 22, 'patch_failed_tests': 8, 'session_timeout': 2, 'abandoned_no_patch': 2}
+  rich: 2/24 resolved | {'patch_failed_tests': 3, 'budget_truncated': 13, 'abandoned_no_patch': 3, 'context_overflow': 3, 'resolved': 2}
+  requests: 0/7 resolved | {'budget_truncated': 2, 'patch_failed_tests': 5}
+tool call 截断（512 上限副作用，§6-5）: 2/65 任务
+token 经济性: prompt 中位数 82143 (n=65) | completion 中位数 724
+
+===== B0p (roots=b0p_runA/output/w2_results_b0p_0-10+b0p_runB/output/w2_results_b0p_10-20_34-42_58-60+b0p_runC/output/w2_results_b0p_20-34_42-48_48-58_60-65) n=65 =====
+resolved: 4/65 = 6.2% | Wilson 95% CI ['2.4%', '14.8%']
+失败模式: patch_failed_tests=23 (35%), context_overflow=23 (35%), abandoned_no_patch=14 (22%), resolved=4 (6%), budget_truncated=1 (2%)
+逐仓库:
+  fastapi: 2/34 resolved | {'abandoned_no_patch': 10, 'patch_failed_tests': 11, 'resolved': 2, 'context_overflow': 11}
+  rich: 2/24 resolved | {'budget_truncated': 1, 'context_overflow': 10, 'patch_failed_tests': 7, 'resolved': 2, 'abandoned_no_patch': 4}
+  requests: 0/7 resolved | {'context_overflow': 2, 'patch_failed_tests': 5}
+tool call 截断（512 上限副作用，§6-5）: 7/65 任务
+token 经济性: prompt 中位数 128526 (n=65) | completion 中位数 948
+
+===== B1A (roots=b1a_runA/output/w2_results_b1a_0-10+b1a_runB/output/w2_results_b1a_10-20_34-42_58-60+b1a_runC/output/w2_results_b1a_20-34_42-48_48-58_60-65) n=65 =====
+resolved: 7/65 = 10.8% | Wilson 95% CI ['5.3%', '20.6%']
+失败模式: abandoned_no_patch=28 (43%), context_overflow=15 (23%), patch_failed_tests=13 (20%), resolved=7 (11%), session_timeout=1 (2%), budget_truncated=1 (2%)
+逐仓库:
+  fastapi: 3/34 resolved | {'abandoned_no_patch': 13, 'resolved': 3, 'context_overflow': 8, 'patch_failed_tests': 8, 'session_timeout': 1, 'budget_truncated': 1}
+  rich: 3/24 resolved | {'abandoned_no_patch': 13, 'context_overflow': 7, 'resolved': 3, 'patch_failed_tests': 1}
+  requests: 1/7 resolved | {'resolved': 1, 'abandoned_no_patch': 2, 'patch_failed_tests': 4}
+tool call 截断（512 上限副作用，§6-5）: 9/65 任务
+token 经济性: prompt 中位数 116911 (n=65) | completion 中位数 1066
+
+===== 配对 McNemar（精确二项，同任务配对）=====
+B0 vs B0p: 配对 n=65 | B0赢 0 / B0p赢 2 | p=0.5000
+B0 vs B1A: 配对 n=65 | B0赢 1 / B1A赢 6 | p=0.1250
+B0p vs B1A: 配对 n=65 | B0p赢 2 / B1A赢 5 | p=0.4531
+
+===== token 对比（prompt 中位数）=====
+  B0: 82143 (n=65)
+  B0p: 128526 (n=65)
+  B1A: 116911 (n=65)
+
+预注册判定（W2_PHASE2_ABLATION_PLAN.md §3）: B1A vs B0p 提升 ≥10pp 且 McNemar p<0.05 → 论文主张成立。

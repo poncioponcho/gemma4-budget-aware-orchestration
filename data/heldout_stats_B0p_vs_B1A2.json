@@ -1,0 +1,211 @@
+{
+  "B0p": {
+    "root": "audit_artifacts/heldout_20261017/B0p/output/w2_results_b0p_heldout_0-63",
+    "n": 63,
+    "resolved": 8,
+    "resolved_rate": 0.12698412698412698,
+    "wilson_95": [
+      0.06577246340780174,
+      0.2310726151061776
+    ],
+    "failure_modes": {
+      "abandoned_no_patch": 9,
+      "context_overflow": 24,
+      "budget_truncated": 4,
+      "resolved": 8,
+      "session_timeout": 2,
+      "patch_failed_tests": 16
+    },
+    "nonempty_patch": 25,
+    "tool_call_truncation": 8,
+    "per_repo": {
+      "fastapi": {
+        "n": 33,
+        "resolved": 3,
+        "rate": 0.09090909090909091,
+        "failure_modes": {
+          "abandoned_no_patch": 4,
+          "context_overflow": 14,
+          "budget_truncated": 3,
+          "resolved": 3,
+          "session_timeout": 1,
+          "patch_failed_tests": 8
+        }
+      },
+      "rich": {
+        "n": 24,
+        "resolved": 3,
+        "rate": 0.125,
+        "failure_modes": {
+          "abandoned_no_patch": 5,
+          "context_overflow": 9,
+          "patch_failed_tests": 6,
+          "resolved": 3,
+          "session_timeout": 1
+        }
+      },
+      "requests": {
+        "n": 6,
+        "resolved": 2,
+        "rate": 0.3333333333333333,
+        "failure_modes": {
+          "patch_failed_tests": 2,
+          "budget_truncated": 1,
+          "context_overflow": 1,
+          "resolved": 2
+        }
+      }
+    },
+    "token_medians": {
+      "prompt": 120473,
+      "completion": 1012
+    },
+    "token_counts": {
+      "prompt": 63,
+      "completion": 63
+    },
+    "status_counts": {
+      "completed": 63
+    },
+    "trace_count": 63,
+    "task_run_count": 63,
+    "split_sha256": "4600b8c12aa64d3739e94101625960f006c79fb253cf2a6715568a52d4f148db",
+    "batch_index": "B0p|heldout|0:63",
+    "hardware_guard": {
+      "passed": true,
+      "torch_probe": "torch 2.11.0+cu128\ncuda_available True\ndevice_count 4\nHARDWARE_JSON={\"cuda\": true, \"count\": 4, \"names\": [\"NVIDIA L4\", \"NVIDIA L4\", \"NVIDIA L4\", \"NVIDIA L4\"]}\n",
+      "reason": "requires exactly four NVIDIA L4 devices before installing or starting the vLLM server"
+    },
+    "artifact_validation": {
+      "task_results": 63,
+      "traces": 63,
+      "task_runs": 63,
+      "contaminated_files": []
+    }
+  },
+  "B1A2": {
+    "root": "audit_artifacts/heldout_20261017/B1A2/output/w2_results_b1a2_heldout_0-63",
+    "n": 63,
+    "resolved": 10,
+    "resolved_rate": 0.15873015873015872,
+    "wilson_95": [
+      0.0885699743235259,
+      0.2681180762318168
+    ],
+    "failure_modes": {
+      "patch_failed_tests": 21,
+      "abandoned_no_patch": 20,
+      "resolved": 10,
+      "context_overflow": 8,
+      "budget_truncated": 4
+    },
+    "nonempty_patch": 31,
+    "tool_call_truncation": 5,
+    "per_repo": {
+      "fastapi": {
+        "n": 33,
+        "resolved": 2,
+        "rate": 0.06060606060606061,
+        "failure_modes": {
+          "patch_failed_tests": 13,
+          "abandoned_no_patch": 13,
+          "resolved": 2,
+          "context_overflow": 3,
+          "budget_truncated": 2
+        }
+      },
+      "rich": {
+        "n": 24,
+        "resolved": 6,
+        "rate": 0.25,
+        "failure_modes": {
+          "abandoned_no_patch": 6,
+          "patch_failed_tests": 6,
+          "resolved": 6,
+          "budget_truncated": 2,
+          "context_overflow": 4
+        }
+      },
+      "requests": {
+        "n": 6,
+        "resolved": 2,
+        "rate": 0.3333333333333333,
+        "failure_modes": {
+          "abandoned_no_patch": 1,
+          "patch_failed_tests": 2,
+          "context_overflow": 1,
+          "resolved": 2
+        }
+      }
+    },
+    "token_medians": {
+      "prompt": 102138,
+      "completion": 1382
+    },
+    "token_counts": {
+      "prompt": 63,
+      "completion": 63
+    },
+    "status_counts": {
+      "completed": 63
+    },
+    "trace_count": 63,
+    "task_run_count": 63,
+    "split_sha256": "4600b8c12aa64d3739e94101625960f006c79fb253cf2a6715568a52d4f148db",
+    "batch_index": "B1A2|heldout|0:63",
+    "hardware_guard": {
+      "passed": true,
+      "torch_probe": "torch 2.11.0+cu128\ncuda_available True\ndevice_count 4\nHARDWARE_JSON={\"cuda\": true, \"count\": 4, \"names\": [\"NVIDIA L4\", \"NVIDIA L4\", \"NVIDIA L4\", \"NVIDIA L4\"]}\n",
+      "reason": "requires exactly four NVIDIA L4 devices before installing or starting the vLLM server"
+    },
+    "artifact_validation": {
+      "task_results": 63,
+      "traces": 63,
+      "task_runs": 63,
+      "contaminated_files": []
+    }
+  },
+  "paired": {
+    "n": 63,
+    "B0p_win": 3,
+    "B1A2_win": 5,
+    "p_mcnemar_doubling": 0.7265625,
+    "p_mcnemar_standard": 0.7265625,
+    "delta_pp": 3.1746031746031744,
+    "discordant_tasks": {
+      "B0p_only": [
+        "fastapi_14372",
+        "fastapi_14492",
+        "rich_3067"
+      ],
+      "B1A2_only": [
+        "fastapi_9555",
+        "rich_2725",
+        "rich_3454",
+        "rich_3518",
+        "rich_3718"
+      ]
+    }
+  },
+  "validation": {
+    "same_task_ids": true,
+    "heldout_task_count": 63,
+    "expected_split_sha256": "4600b8c12aa64d3739e94101625960f006c79fb253cf2a6715568a52d4f148db",
+    "decision_line": ">=10pp and McNemar p<0.05",
+    "verdict": "not_met"
+  },
+  "run_metadata": {
+    "B0p": {
+      "kaggle_version": 19,
+      "kernel_status": "COMPLETE"
+    },
+    "B1A2": {
+      "kaggle_version": 20,
+      "kernel_status": "ERROR_after_all_63_task_runs",
+      "error_stage": "summary_cell_after_task_loop",
+      "error": "ValueError: unmatched non-empty error: Failed to apply test_patch"
+    },
+    "intermediate_results_read_during_run": false,
+    "analysis_rule": "kernel ERROR is not treated as task failure when all expected task_runs are complete"
+  }
+}

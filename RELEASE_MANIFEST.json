@@ -1,0 +1,140 @@
+{
+  "release": "gemma4-budget-aware-orchestration-artifact",
+  "generated_utc": "2026-10-18T02:27:34+00:00",
+  "file_count": 25,
+  "total_bytes": 315313,
+  "integrity_note": "SHA-256 over every shipped file. The per-task CSV regenerates every paper number (see code/reproduce_results.ipynb assertions).",
+  "provenance": {
+    "per_task_results.csv": "Extracted from the six archived arm-run outputs with code/make_per_task_csv.py (attempt-selection and token-metric conventions mirror the frozen analyze_ablation.py).",
+    "logs/analyze_heldout_B0p_vs_B1A2_20261017.log": "Sanitized release copy: machine-specific path prefixes replaced by relative 'audit_artifacts/' prefixes; no numeric content changed.",
+    "freeze_manifest.json": "Unmodified copy of the SHA-256 freeze manifest (tasks, splits, bundles, budgets, sampling, scripts, decision line).",
+    "not_included": "Raw task snapshots, repository checkouts, agent traces, and model weights are intentionally not redistributed; the freeze manifest pins their hashes."
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 9345,
+      "sha256": "63b818d65139f15b00d4dfef09bef1bfc0506df18cd037e34f61f1cf519a15a9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5149,
+      "sha256": "95a0ca7300b079a538b8c3a6a5f92f0a5030158c97d41b0eabd9f1f7879027c5"
+    },
+    {
+      "path": "code/analyze_ablation.py",
+      "bytes": 7268,
+      "sha256": "4c013a2eab15f813d9a8c97721d9601125b691bea2cd7ac76337fb34f27c8d06"
+    },
+    {
+      "path": "code/build_kaggle_kernel.py",
+      "bytes": 8417,
+      "sha256": "1026ee1f85476fed47cea65a11fb0d97e00689792275ac4ebd7756c2c3585229"
+    },
+    {
+      "path": "code/build_reproduce_notebook.py",
+      "bytes": 6854,
+      "sha256": "1068308e7e2a765f1417ff8951d8bc2760bd2df8141f8b66a243c04a64748a28"
+    },
+    {
+      "path": "code/freeze.py",
+      "bytes": 6839,
+      "sha256": "28b1573a0b4f62796d7fe5c82b78f35c6b6cd32582d5466e5c057a57471fb681"
+    },
+    {
+      "path": "code/handoff_forensics.py",
+      "bytes": 6846,
+      "sha256": "dbd207a3732fe4b4526ded699c1e3fa5efc3260624100d630f1f985ed56b6915"
+    },
+    {
+      "path": "code/make_per_task_csv.py",
+      "bytes": 5855,
+      "sha256": "98d9ee0d78c7c865d0ed7cf3e3c8832ffa9b3da5b45d3aa6698b6554d1c57ee1"
+    },
+    {
+      "path": "code/reproduce_results.ipynb",
+      "bytes": 13227,
+      "sha256": "112280dd9394bfefe14de6ae2137a6096cad13b1caac838fc343a95e0dc4b310"
+    },
+    {
+      "path": "code/stats.py",
+      "bytes": 3895,
+      "sha256": "99b6021ad2ced00d50d9bd089ad5229d876219e389c17cbd04a0f9509e1b426f"
+    },
+    {
+      "path": "code/task_record.py",
+      "bytes": 1863,
+      "sha256": "9ef80356962d8faacd75d103568da0b55ce8af93cc11a78fcf9eb54c4506e711"
+    },
+    {
+      "path": "code/validate_bundle.py",
+      "bytes": 7011,
+      "sha256": "714d02d1fe0c252ad0d055d8ba0ea875d16c9087a175f1e6c6607afaef0cbffb"
+    },
+    {
+      "path": "data/freeze_manifest.json",
+      "bytes": 6298,
+      "sha256": "017ec8320348dd9ab138b9822e321e21b3f8553ad0f1e8c567629981deeec502"
+    },
+    {
+      "path": "data/heldout_stats_B0p_vs_B1A2.json",
+      "bytes": 5741,
+      "sha256": "a237838db705e0804f96279662c25fca6ee0391ed2697e25277669945b93eb99"
+    },
+    {
+      "path": "data/per_task_results.csv",
+      "bytes": 80795,
+      "sha256": "187d450b1ae83de9abc23e52cdf78115f8d82463215df0a4bd7966fd37765afa"
+    },
+    {
+      "path": "data/split_development.json",
+      "bytes": 2354,
+      "sha256": "0cd2371a9a4bd5af3280e03948a719af04fed5ef4c7f72811d00a08d1997a3b5"
+    },
+    {
+      "path": "data/split_heldout.json",
+      "bytes": 2309,
+      "sha256": "4600b8c12aa64d3739e94101625960f006c79fb253cf2a6715568a52d4f148db"
+    },
+    {
+      "path": "data/split_manifest.json",
+      "bytes": 1005,
+      "sha256": "f5fff5cab2098ae8d3a61be77651c43fb4f5fd2e09fa1d0f5404c0cefcf0666b"
+    },
+    {
+      "path": "kaggle_public_kernel/gemma4_paper_ablation_public.ipynb",
+      "bytes": 94142,
+      "sha256": "d42fe76b5292755fb0d4e5489aac4f88fff368c8ad3de35a4576836ef728f469"
+    },
+    {
+      "path": "kaggle_public_kernel/kernel-metadata.json",
+      "bytes": 572,
+      "sha256": "665003a1491232cfab346f23a0e1497740acb25ecaee8aa4d1d11bdd127618ea"
+    },
+    {
+      "path": "logs/analyze_ablation_B0p_vs_B1A2_20261017.log",
+      "bytes": 2116,
+      "sha256": "b283661761b2fd588a0c09592012403b8ba2011d735276fe1debcd36668d2da4"
+    },
+    {
+      "path": "logs/analyze_heldout_B0p_vs_B1A2_20261017.log",
+      "bytes": 2068,
+      "sha256": "c1253bdb40bfdb1b939f63d77e23a7724f9678feb9cf31ccabecb6b139cefba7"
+    },
+    {
+      "path": "logs/base_commit_probe_20261017.json",
+      "bytes": 11629,
+      "sha256": "13989908ee43ba5c929c14b6ed93f72be269b4a75e4c6d989056b5c64d90a3cf"
+    },
+    {
+      "path": "logs/c3_three_arm_n65_20261016.log",
+      "bytes": 3084,
+      "sha256": "36e2a929fe4cbe855b9b8c1ce2aa51001b77bb7bb0847d66cced445a0d760db2"
+    },
+    {
+      "path": "paper/writeup.md",
+      "bytes": 20631,
+      "sha256": "e755c208431a5ddf1984d71877257c3614ec8908abdd108cf4d64b3e95561862"
+    }
+  ]
+}
