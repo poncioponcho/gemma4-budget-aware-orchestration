@@ -1,8 +1,8 @@
 {
   "release": "gemma4-budget-aware-orchestration-artifact",
-  "generated_utc": "2026-10-18T02:27:34+00:00",
+  "generated_utc": "2026-10-18T04:58:25+00:00",
   "file_count": 25,
-  "total_bytes": 315313,
+  "total_bytes": 317326,
   "integrity_note": "SHA-256 over every shipped file. The per-task CSV regenerates every paper number (see code/reproduce_results.ipynb assertions).",
   "provenance": {
     "per_task_results.csv": "Extracted from the six archived arm-run outputs with code/make_per_task_csv.py (attempt-selection and token-metric conventions mirror the frozen analyze_ablation.py).",
@@ -13,8 +13,8 @@
   "files": [
     {
       "path": "LICENSE",
-      "bytes": 9345,
-      "sha256": "63b818d65139f15b00d4dfef09bef1bfc0506df18cd037e34f61f1cf519a15a9"
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
     },
     {
       "path": "README.md",
