@@ -30,7 +30,7 @@ non-binding on this model.
 
 | Path | What it is |
 |---|---|
-| `paper/writeup.md` | The submission writeup (English, 2,952 words incl. tables, ≤3,000 limit) |
+| `paper/writeup.md` | The submission writeup — byte-identical to the version submitted on Kaggle (English, 2,963 words incl. tables, ≤3,000 limit; SHA-256 `f07ab276…b5733a`). The body starts at `## Abstract`; title and subtitle live in the competition metadata. |
 | `data/per_task_results.csv` | 386 rows (6 arm-runs × tasks): per-task resolved/failure mode, patch size, error, tool calls, prompt/completion tokens, 512-cap truncation flag |
 | `data/heldout_stats_B0p_vs_B1A2.json` | Frozen held-out analysis (n=63 per arm) with validation block and run metadata |
 | `data/freeze_manifest.json` | SHA-256 freeze manifest of tasks, splits, per-arm bundles, budgets, sampling, scripts, decision line |
